@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nexa | Advanced AI Interface</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .glass-morphism {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #475569;
+        }
+
+        /* Floating Animation */
+        .float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* Eye Blink Animation */
+        @keyframes blink {
+
+            0%,
+            90%,
+            100% {
+                transform: scaleY(1);
+            }
+
+            95% {
+                transform: scaleY(0.1);
+            }
+        }
+
+        .eye {
+            animation: blink 4s infinite;
+        }
+
+        /* Mouth Animation (Speaking) */
+        @keyframes speak {
+
+            0%,
+            100% {
+                height: 8px;
+            }
+
+            50% {
+                height: 32px;
+            }
+        }
+
+        .speaking .bar {
+            animation: speak 0.3s infinite ease-in-out;
+        }
+
+        .speaking .bar:nth-child(odd) {
+            animation-duration: 0.4s;
+        }
+
+        .speaking .bar:nth-child(2n) {
+            animation-duration: 0.25s;
+        }
+
+        /* Listening State */
+        .listening .eye {
+            background-color: #f472b6;
+            box-shadow: 0 0 20px rgba(244, 114, 182, 0.8);
+            height: 12px;
+        }
+
+        .listening #mouth .bar {
+            background-color: #f472b6;
+            height: 4px;
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                height: 4px;
+                opacity: 0.5;
+            }
+
+            50% {
+                height: 12px;
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body
+    class="bg-[#050505] text-white min-h-screen flex items-center justify-center overflow-hidden selection:bg-cyan-500 selection:text-black">
+
+    <!-- Ambient Background -->
+    <div class="fixed inset-0 z-0">
+        <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-900/20 rounded-full blur-[120px]"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-cyan-900/20 rounded-full blur-[120px]"></div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="relative z-10 w-full max-w-6xl h-[85vh] flex gap-6 p-6">
+
+        <!-- Sidebar / Control Center -->
+        <div class="w-80 glass-morphism rounded-3xl p-6 flex flex-col justify-between float">
+            <div>
+                <div class="flex items-center gap-3 mb-8">
+                    <div
+                        class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center shadow-lg shadow-cyan-500/20">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h1 class="text-2xl font-bold tracking-tight">Nexa<span class="text-cyan-400">.ai</span></h1>
+                </div>
+
+                <div class="space-y-6">
+                    <div>
+                        <label class="text-xs font-medium text-slate-400 uppercase tracking-widest mb-2 block">Voice
+                            Persona</label>
+                        <div class="relative">
+                            <select id="voiceSelect"
+                                class="w-full bg-white/5 border border-white/10 rounded-xl p-3 text-sm text-slate-200 focus:outline-none focus:border-cyan-500 transition-colors appearance-none cursor-pointer hover:bg-white/10">
+                                <option>Loading voices...</option>
+                            </select>
+                            <div class="absolute right-3 top-3.5 pointer-events-none text-slate-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="text-xs font-medium text-slate-400 uppercase tracking-widest mb-2 block">System
+                            Status</label>
+                        <div class="bg-white/5 rounded-xl p-4 border border-white/10">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-xs text-slate-400">Connection</span>
+                                <span class="text-xs text-emerald-400 flex items-center gap-1">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                                    Active
+                                </span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs text-slate-400">Model</span>
+                                <span class="text-xs text-cyan-400">GPT-2</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button id="getTimeBtn"
+                class="w-full py-3 rounded-xl bg-gradient-to-r from-slate-800 to-slate-900 border border-slate-700 hover:border-cyan-500/50 text-sm font-medium transition-all group relative overflow-hidden">
+                <span class="relative z-10 group-hover:text-cyan-400 transition-colors">Sync System Time</span>
+                <div
+                    class="absolute inset-0 bg-cyan-500/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                </div>
+            </button>
+        </div>
+
+        <!-- Main Interface -->
+        <div class="flex-1 flex flex-col gap-6">
+
+            <!-- Chat Area -->
+            <div id="chatContainer"
+                class="flex-1 glass-morphism rounded-3xl p-8 overflow-y-auto flex flex-col gap-6 scroll-smooth relative">
+                <!-- Welcome -->
+                <div class="flex gap-4 animate-fade-in">
+                    <div
+                        class="w-10 h-10 rounded-full bg-gradient-to-br from-cyan-500 to-blue-600 flex-shrink-0 flex items-center justify-center shadow-lg shadow-cyan-500/20">
+                        <span class="font-bold text-sm">N</span>
+                    </div>
+                    <div class="space-y-1">
+                        <div class="text-xs text-slate-400 ml-1">Nexa AI</div>
+                        <div
+                            class="bg-white/5 border border-white/10 p-4 rounded-2xl rounded-tl-none text-slate-200 text-sm leading-relaxed max-w-lg">
+                            Systems online. I am Nexa, your advanced voice assistant. How may I assist you today?
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input / Avatar Area -->
+            <div
+                class="h-64 glass-morphism rounded-3xl p-4 flex items-center justify-center relative transition-all duration-300">
+
+                <!-- Avatar Container -->
+                <div id="avatarContainer"
+                    class="w-full h-full flex flex-col items-center justify-center gap-6 relative z-10">
+
+                    <!-- Digital Face -->
+                    <div class="flex flex-col items-center gap-4 transition-all duration-300">
+                        <!-- Eyes -->
+                        <div class="flex gap-12">
+                            <div
+                                class="eye w-12 h-3 bg-cyan-400 rounded-full shadow-[0_0_15px_rgba(34,211,238,0.6)] transition-all duration-200">
+                            </div>
+                            <div
+                                class="eye w-12 h-3 bg-cyan-400 rounded-full shadow-[0_0_15px_rgba(34,211,238,0.6)] transition-all duration-200">
+                            </div>
+                        </div>
+
+                        <!-- Mouth (Waveform) -->
+                        <div id="mouth" class="h-8 flex items-center gap-1 opacity-60 transition-all duration-300">
+                            <div class="bar w-1.5 h-1.5 bg-cyan-400 rounded-full"></div>
+                            <div class="bar w-1.5 h-1.5 bg-cyan-400 rounded-full"></div>
+                            <div class="bar w-1.5 h-1.5 bg-cyan-400 rounded-full"></div>
+                            <div class="bar w-1.5 h-1.5 bg-cyan-400 rounded-full"></div>
+                            <div class="bar w-1.5 h-1.5 bg-cyan-400 rounded-full"></div>
+                        </div>
+                    </div>
+
+                    <!-- Mic Button -->
+                    <button id="micBtn"
+                        class="w-16 h-16 rounded-full bg-white/10 hover:bg-white/20 border border-white/10 backdrop-blur-md flex items-center justify-center transition-all hover:scale-110 active:scale-95 group z-50 cursor-pointer shadow-lg shadow-cyan-500/10">
+                        <svg id="micIcon" xmlns="http://www.w3.org/2000/svg"
+                            class="h-7 w-7 text-cyan-400 group-hover:text-white transition-colors" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const micBtn = document.getElementById('micBtn');
+        const chatContainer = document.getElementById('chatContainer');
+        const avatarContainer = document.getElementById('avatarContainer');
+        const mouth = document.getElementById('mouth');
+        const getTimeBtn = document.getElementById('getTimeBtn');
+        const voiceSelect = document.getElementById('voiceSelect');
+
+        // --- Voice & Persona Logic ---
+        let systemVoices = [];
+
+        const personas = [
+            { id: 'default', name: "Nexa (Standard)", pitch: 1.0, rate: 1.0 },
+            { id: 'amitabh', name: "Amitabh Style (Deep & Heavy)", pitch: 0.6, rate: 0.85, type: 'male' },
+            { id: 'jarvis', name: "Jarvis (Fast & Robotic)", pitch: 1.0, rate: 1.15, type: 'male' },
+            { id: 'chipmunk', name: "Funny (High Pitch)", pitch: 1.8, rate: 1.1, type: 'female' },
+            { id: 'storyteller', name: "Storyteller (Slow)", pitch: 0.9, rate: 0.8, type: 'female' },
+            { id: 'hacker', name: "Hacker (Low & Fast)", pitch: 0.7, rate: 1.2, type: 'male' }
+        ];
+
+        function populateVoices() {
+            systemVoices = window.speechSynthesis.getVoices();
+            voiceSelect.innerHTML = '';
+
+            const group1 = document.createElement('optgroup');
+            group1.label = "AI Personas";
+            personas.forEach(p => {
+                const option = document.createElement('option');
+                option.textContent = p.name;
+                option.value = p.id;
+                group1.appendChild(option);
+            });
+            voiceSelect.appendChild(group1);
+
+            const group2 = document.createElement('optgroup');
+            group2.label = "System Voices";
+            systemVoices.forEach((voice, i) => {
+                const option = document.createElement('option');
+                option.textContent = `${voice.name} (${voice.lang})`;
+                option.value = `sys_${i}`;
+                group2.appendChild(option);
+            });
+            voiceSelect.appendChild(group2);
+        }
+
+        populateVoices();
+        if (window.speechSynthesis.onvoiceschanged !== undefined) {
+            window.speechSynthesis.onvoiceschanged = populateVoices;
+        }
+
+        // --- UI Helpers ---
+        function addMessage(text, isUser = false, isInterim = false) {
+            const existingInterim = document.getElementById('interim-message');
+            if (existingInterim) existingInterim.remove();
+
+            const wrapper = document.createElement('div');
+            wrapper.className = `flex gap-4 animate-fade-in ${isUser ? 'flex-row-reverse' : ''}`;
+            if (isInterim) wrapper.id = 'interim-message';
+
+            const avatar = document.createElement('div');
+            avatar.className = `w-10 h-10 rounded-full flex-shrink-0 flex items-center justify-center shadow-lg ${isUser ? 'bg-slate-700 text-slate-300' : 'bg-gradient-to-br from-cyan-500 to-blue-600 text-white shadow-cyan-500/20'}`;
+            avatar.innerHTML = `<span class="font-bold text-sm">${isUser ? 'U' : 'N'}</span>`;
+
+            const content = document.createElement('div');
+            content.className = 'space-y-1';
+
+            const name = document.createElement('div');
+            name.className = `text-xs text-slate-400 ${isUser ? 'text-right mr-1' : 'ml-1'}`;
+            name.innerText = isUser ? 'You' : 'Nexa AI';
+
+            const bubble = document.createElement('div');
+            bubble.className = `p-4 rounded-2xl text-sm leading-relaxed max-w-lg ${isUser ? 'bg-cyan-500/10 border border-cyan-500/20 text-cyan-100 rounded-tr-none' : 'bg-white/5 border border-white/10 text-slate-200 rounded-tl-none'}`;
+            if (isInterim) bubble.classList.add('opacity-50', 'italic');
+            bubble.innerText = text;
+
+            content.appendChild(name);
+            content.appendChild(bubble);
+            wrapper.appendChild(avatar);
+            wrapper.appendChild(content);
+
+            chatContainer.appendChild(wrapper);
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+        }
+
+        function setFaceState(state) {
+            avatarContainer.classList.remove('listening', 'speaking');
+            mouth.classList.remove('speaking');
+
+            if (state === 'listening') {
+                avatarContainer.classList.add('listening');
+            } else if (state === 'speaking') {
+                avatarContainer.classList.add('speaking');
+                mouth.classList.add('speaking');
+            }
+        }
+
+        function speak(text) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                const utterance = new SpeechSynthesisUtterance(text);
+                const selectedVal = voiceSelect.value;
+
+                if (selectedVal.startsWith('sys_')) {
+                    const idx = parseInt(selectedVal.split('_')[1]);
+                    if (systemVoices[idx]) utterance.voice = systemVoices[idx];
+                } else {
+                    const persona = personas.find(p => p.id === selectedVal);
+                    if (persona) {
+                        utterance.pitch = persona.pitch;
+                        utterance.rate = persona.rate;
+                        let bestVoice = null;
+                        if (persona.type === 'male') {
+                            bestVoice = systemVoices.find(v => v.name.includes('David') || v.name.includes('Male') || v.name.includes('United States'));
+                        } else {
+                            bestVoice = systemVoices.find(v => v.name.includes('Zira') || v.name.includes('Female') || v.name.includes('Google'));
+                        }
+                        if (bestVoice) utterance.voice = bestVoice;
+                    }
+                }
+
+                utterance.onstart = () => setFaceState('speaking');
+                utterance.onend = () => setFaceState('idle');
+
+                window.speechSynthesis.speak(utterance);
+            }
+        }
+
+        // --- Core Logic ---
+        const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+        let recognition = null;
+
+        if (SpeechRecognition) {
+            recognition = new SpeechRecognition();
+            recognition.continuous = false;
+            recognition.lang = 'en-US';
+            recognition.interimResults = true;
+
+            recognition.addEventListener('start', () => {
+                setFaceState('listening');
+            });
+
+            recognition.addEventListener('end', () => {
+                if (!avatarContainer.classList.contains('speaking')) {
+                    setFaceState('idle');
+                }
+            });
+
+            recognition.addEventListener('result', (event) => {
+                let interimTranscript = '';
+                let finalTranscript = '';
+
+                for (let i = event.resultIndex; i < event.results.length; ++i) {
+                    if (event.results[i].isFinal) {
+                        finalTranscript += event.results[i][0].transcript;
+                    } else {
+                        interimTranscript += event.results[i][0].transcript;
+                    }
+                }
+
+                if (interimTranscript) {
+                    addMessage(interimTranscript, true, true);
+                }
+
+                if (finalTranscript) {
+                    const existingInterim = document.getElementById('interim-message');
+                    if (existingInterim) existingInterim.remove();
+
+                    addMessage(finalTranscript, true);
+                    setFaceState('idle');
+
+                    const lowerText = finalTranscript.toLowerCase();
+                    if (lowerText.includes('open google')) {
+                        window.open('https://google.com', '_blank');
+                        const reply = "Opening Google for you.";
+                        addMessage(reply, false);
+                        speak(reply);
+                        return;
+                    }
+                    if (lowerText.includes('open youtube')) {
+                        window.open('https://youtube.com', '_blank');
+                        const reply = "Opening YouTube for you.";
+                        addMessage(reply, false);
+                        speak(reply);
+                        return;
+                    }
+
+                    fetch('/api/command', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ command: finalTranscript })
+                    }).then(r => r.json()).then(data => {
+                        const reply = data.reply || 'No reply from server';
+                        addMessage(reply, false);
+                        speak(reply);
+                    }).catch(err => {
+                        console.error("Fetch Error:", err);
+                        addMessage(`Offline Mode: Could not reach server (${err.message}).`, false);
+                        speak("I cannot reach the server right now.");
+                        setFaceState('idle');
+                    });
+                }
+            });
+
+            recognition.addEventListener('error', (event) => {
+                setFaceState('idle');
+                console.error(event.error);
+                if (event.error === 'not-allowed') {
+                    addMessage("Microphone access denied. Please allow permission.", false);
+                }
+            });
+        }
+
+        micBtn.addEventListener('click', () => {
+            if (!recognition) {
+                addMessage("Speech Recognition not supported in this browser.", false);
+                return;
+            }
+
+            try {
+                if (avatarContainer.classList.contains('listening')) {
+                    recognition.stop();
+                    setFaceState('idle');
+                } else {
+                    recognition.start();
+                }
+            } catch (e) {
+                console.error("Mic Error:", e);
+                recognition.stop();
+                setFaceState('idle');
+            }
+        });
+
+        getTimeBtn.addEventListener('click', () => {
+            const now = new Date();
+            addMessage(`System Time: ${now.toLocaleTimeString()}`, false);
+        });
+    </script>
+</body>
+
+</html>
