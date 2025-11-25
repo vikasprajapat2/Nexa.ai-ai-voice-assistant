@@ -1,0 +1,630 @@
+{
+  "patterns": {
+    "mere": [
+      {
+        "response": "Tell me more about what you need help with.",
+        "context": "statement",
+        "count": 1,
+        "last_used": "2025-11-25T09:47:00.751061"
+      }
+    ],
+    "hath": [
+      {
+        "response": "Tell me more about what you need help with.",
+        "context": "statement",
+        "count": 1,
+        "last_used": "2025-11-25T09:47:00.751061"
+      }
+    ],
+    "mein": [
+      {
+        "response": "Tell me more about what you need help with.",
+        "context": "statement",
+        "count": 1,
+        "last_used": "2025-11-25T09:47:00.751061"
+      }
+    ],
+    "thodi": [
+      {
+        "response": "Tell me more about what you need help with.",
+        "context": "statement",
+        "count": 1,
+        "last_used": "2025-11-25T09:47:00.751061"
+      }
+    ],
+    "yaar": [
+      {
+        "response": "Tell me more about what you need help with.",
+        "context": "statement",
+        "count": 1,
+        "last_used": "2025-11-25T09:47:00.751061"
+      }
+    ],
+    "vah": [
+      {
+        "response": "Tell me more about what you need help with.",
+        "context": "statement",
+        "count": 1,
+        "last_used": "2025-11-25T09:47:00.751061"
+      }
+    ],
+    "vahan": [
+      {
+        "response": "Tell me more about what you need help with.",
+        "context": "statement",
+        "count": 1,
+        "last_used": "2025-11-25T09:47:00.751061"
+      }
+    ],
+    "download": [
+      {
+        "response": "Tell me more about what you need help with.",
+        "context": "statement",
+        "count": 1,
+        "last_used": "2025-11-25T09:48:10.779192"
+      }
+    ],
+    "karne": [
+      {
+        "response": "Tell me more about what you need help with.",
+        "context": "statement",
+        "count": 1,
+        "last_used": "2025-11-25T09:48:10.779192"
+      }
+    ],
+    "hello": [
+      {
+        "response": "Hello! How can I help you?",
+        "context": "greeting",
+        "count": 2,
+        "last_used": "2025-11-25T10:14:43.877702"
+      }
+    ],
+    "nexa": [
+      {
+        "response": "Hello! How can I help you?",
+        "context": "greeting",
+        "count": 2,
+        "last_used": "2025-11-25T10:14:43.877702"
+      }
+    ],
+    "whats": [
+      {
+        "response": "I don't have access to weather data, but I can help you search for it online!",
+        "context": "question",
+        "count": 1,
+        "last_used": "2025-11-25T10:14:43.881442"
+      }
+    ],
+    "weather": [
+      {
+        "response": "I don't have access to weather data, but I can help you search for it online!",
+        "context": "question",
+        "count": 1,
+        "last_used": "2025-11-25T10:14:43.881442"
+      },
+      {
+        "response": "Tell me more about what you need help with.",
+        "context": "statement",
+        "count": 1,
+        "last_used": "2025-11-25T10:32:34.904506"
+      }
+    ],
+    "like": [
+      {
+        "response": "I don't have access to weather data, but I can help you search for it online!",
+        "context": "question",
+        "count": 1,
+        "last_used": "2025-11-25T10:14:43.881442"
+      }
+    ],
+    "tell": [
+      {
+        "response": "I can open a weather website for you, or search Google for your local weather. What would you prefer?",
+        "context": "information_request",
+        "count": 1,
+        "last_used": "2025-11-25T10:14:43.882448"
+      }
+    ],
+    "more": [
+      {
+        "response": "I can open a weather website for you, or search Google for your local weather. What would you prefer?",
+        "context": "information_request",
+        "count": 1,
+        "last_used": "2025-11-25T10:14:43.882448"
+      }
+    ],
+    "open": [
+      {
+        "response": "Attempting to open Gs Code.",
+        "context": "command",
+        "count": 2,
+        "last_used": "2025-11-25T11:19:14.306680"
+      },
+      {
+        "response": "Opening Vs Code.",
+        "context": "command",
+        "count": 1,
+        "last_used": "2025-11-25T10:19:28.365105"
+      }
+    ],
+    "code": [
+      {
+        "response": "Attempting to open Gs Code.",
+        "context": "command",
+        "count": 1,
+        "last_used": "2025-11-25T10:19:27.917081"
+      },
+      {
+        "response": "Opening Vs Code.",
+        "context": "command",
+        "count": 1,
+        "last_used": "2025-11-25T10:19:28.365105"
+      }
+    ],
+    "today": [
+      {
+        "response": "Tell me more about what you need help with.",
+        "context": "statement",
+        "count": 2,
+        "last_used": "2025-11-25T10:32:29.270017"
+      }
+    ],
+    "time": [
+      {
+        "response": "Tell me more about what you need help with.",
+        "context": "statement",
+        "count": 2,
+        "last_used": "2025-11-25T10:32:29.270017"
+      }
+    ],
+    "report": [
+      {
+        "response": "Tell me more about what you need help with.",
+        "context": "statement",
+        "count": 1,
+        "last_used": "2025-11-25T10:32:34.904506"
+      }
+    ],
+    "alexa": [
+      {
+        "response": "Hello! How can I help you?",
+        "context": "greeting",
+        "count": 3,
+        "last_used": "2025-11-25T10:39:40.537344"
+      }
+    ],
+    "what": [
+      {
+        "response": "Hello! How can I help you?",
+        "context": "question",
+        "count": 4,
+        "last_used": "2025-11-25T17:08:01.073282"
+      }
+    ],
+    "apple": [
+      {
+        "response": "Hello! How can I help you?",
+        "context": "question",
+        "count": 2,
+        "last_used": "2025-11-25T17:08:01.073282"
+      }
+    ],
+    "iphone": [
+      {
+        "response": "Hello! How can I help you?",
+        "context": "question",
+        "count": 1,
+        "last_used": "2025-11-25T10:39:06.866961"
+      }
+    ],
+    "saregamapa": [
+      {
+        "response": "Tell me more about what you need help with.",
+        "context": "statement",
+        "count": 1,
+        "last_used": "2025-11-25T11:05:57.566129"
+      }
+    ],
+    "tvs": [
+      {
+        "response": "Tell me more about what you need help with.",
+        "context": "statement",
+        "count": 1,
+        "last_used": "2025-11-25T11:06:02.754039"
+      }
+    ],
+    "chat": [
+      {
+        "response": "Attempting to open Gs Code.",
+        "context": "question",
+        "count": 1,
+        "last_used": "2025-11-25T11:19:14.307589"
+      }
+    ],
+    "gbwhatsapp": [
+      {
+        "response": "Attempting to open Gs Code.",
+        "context": "question",
+        "count": 1,
+        "last_used": "2025-11-25T11:19:14.307589"
+      }
+    ],
+    "ise": [
+      {
+        "response": "Hello! How can I help you?",
+        "context": "question",
+        "count": 1,
+        "last_used": "2025-11-25T11:19:33.535130"
+      }
+    ],
+    "your": [
+      {
+        "response": "Hello! How can I help you?",
+        "context": "question",
+        "count": 1,
+        "last_used": "2025-11-25T11:19:33.535130"
+      }
+    ],
+    "name": [
+      {
+        "response": "Hello! How can I help you?",
+        "context": "question",
+        "count": 1,
+        "last_used": "2025-11-25T11:19:33.535130"
+      }
+    ],
+    "sare": [
+      {
+        "response": "Tell me more about what you need help with.",
+        "context": "statement",
+        "count": 1,
+        "last_used": "2025-11-25T17:01:05.153066"
+      }
+    ],
+    "google": [
+      {
+        "response": "Hello! How can I help you?",
+        "context": "greeting",
+        "count": 1,
+        "last_used": "2025-11-25T17:07:51.475268"
+      }
+    ],
+    "number": [
+      {
+        "response": "Hello! How can I help you?",
+        "context": "greeting",
+        "count": 1,
+        "last_used": "2025-11-25T17:07:51.475268"
+      }
+    ]
+  },
+  "context": {},
+  "intents": {
+    "statement": [
+      {
+        "input": "Mere Hath Mein Thodi Na Yaar vah vahan se",
+        "response": "Tell me more about what you need help with.",
+        "timestamp": "2025-11-25T09:47:00.751061"
+      },
+      {
+        "input": "download karne ke",
+        "response": "Tell me more about what you need help with.",
+        "timestamp": "2025-11-25T09:48:10.779192"
+      },
+      {
+        "input": "today time",
+        "response": "Tell me more about what you need help with.",
+        "timestamp": "2025-11-25T10:32:21.999739"
+      },
+      {
+        "input": "today time",
+        "response": "Tell me more about what you need help with.",
+        "timestamp": "2025-11-25T10:32:29.270017"
+      },
+      {
+        "input": "weather report",
+        "response": "Tell me more about what you need help with.",
+        "timestamp": "2025-11-25T10:32:34.904506"
+      },
+      {
+        "input": "Saregamapa",
+        "response": "Tell me more about what you need help with.",
+        "timestamp": "2025-11-25T11:05:57.566129"
+      },
+      {
+        "input": "TVS",
+        "response": "Tell me more about what you need help with.",
+        "timestamp": "2025-11-25T11:06:02.754039"
+      },
+      {
+        "input": "Sare",
+        "response": "Tell me more about what you need help with.",
+        "timestamp": "2025-11-25T17:01:05.153066"
+      }
+    ],
+    "greeting": [
+      {
+        "input": "Hello Nexa",
+        "response": "Hello! How can I help you?",
+        "timestamp": "2025-11-25T10:14:13.694157"
+      },
+      {
+        "input": "Hello Nexa",
+        "response": "Hello! How can I help you?",
+        "timestamp": "2025-11-25T10:14:43.877702"
+      },
+      {
+        "input": "hi Alexa",
+        "response": "Hello! How can I help you?",
+        "timestamp": "2025-11-25T10:38:39.390148"
+      },
+      {
+        "input": "hi Alexa",
+        "response": "Hello! How can I help you?",
+        "timestamp": "2025-11-25T10:39:40.537344"
+      },
+      {
+        "input": "hi Google 12 number",
+        "response": "Hello! How can I help you?",
+        "timestamp": "2025-11-25T17:07:51.475268"
+      }
+    ],
+    "question": [
+      {
+        "input": "What's the weather like?",
+        "response": "I don't have access to weather data, but I can help you search for it online!",
+        "timestamp": "2025-11-25T10:14:43.881442"
+      },
+      {
+        "input": "Alexa what is Apple iPhone",
+        "response": "Hello! How can I help you?",
+        "timestamp": "2025-11-25T10:39:06.866961"
+      },
+      {
+        "input": "what is",
+        "response": "Hello! How can I help you?",
+        "timestamp": "2025-11-25T10:39:47.338362"
+      },
+      {
+        "input": "open chat gbwhatsapp",
+        "response": "Attempting to open Gs Code.",
+        "timestamp": "2025-11-25T11:19:14.307589"
+      },
+      {
+        "input": "what ise your name",
+        "response": "Hello! How can I help you?",
+        "timestamp": "2025-11-25T11:19:33.535130"
+      },
+      {
+        "input": "what is Apple",
+        "response": "Hello! How can I help you?",
+        "timestamp": "2025-11-25T17:08:01.073282"
+      }
+    ],
+    "information_request": [
+      {
+        "input": "Tell me more",
+        "response": "I can open a weather website for you, or search Google for your local weather. What would you prefer?",
+        "timestamp": "2025-11-25T10:14:43.882448"
+      }
+    ],
+    "command": [
+      {
+        "input": "open GS code",
+        "response": "Attempting to open Gs Code.",
+        "timestamp": "2025-11-25T10:19:27.917081"
+      },
+      {
+        "input": "open vs code",
+        "response": "Opening Vs Code.",
+        "timestamp": "2025-11-25T10:19:28.365105"
+      }
+    ]
+  },
+  "vocabulary": [
+    "vahan",
+    "vah",
+    "mere",
+    "download",
+    "karne",
+    "hath",
+    "yaar",
+    "mein",
+    "thodi",
+    "hello",
+    "nexa",
+    "whats",
+    "weather",
+    "like",
+    "tell",
+    "more",
+    "open",
+    "code",
+    "today",
+    "time",
+    "report",
+    "alexa",
+    "what",
+    "apple",
+    "iphone",
+    "saregamapa",
+    "tvs",
+    "chat",
+    "gbwhatsapp",
+    "ise",
+    "your",
+    "name",
+    "sare",
+    "google",
+    "number"
+  ],
+  "response_quality": {},
+  "conversations": [
+    {
+      "exchanges": [
+        {
+          "user": "Hello Nexa",
+          "assistant": "Hello! How can I help you?",
+          "timestamp": "2025-11-25T10:14:43.877702"
+        },
+        {
+          "user": "What's the weather like?",
+          "assistant": "I don't have access to weather data, but I can help you search for it online!",
+          "timestamp": "2025-11-25T10:14:43.880479"
+        }
+      ],
+      "timestamp": "2025-11-25T10:14:43.881442"
+    },
+    {
+      "exchanges": [
+        {
+          "user": "What's the weather like?",
+          "assistant": "I don't have access to weather data, but I can help you search for it online!",
+          "timestamp": "2025-11-25T10:14:43.880479"
+        },
+        {
+          "user": "Tell me more",
+          "assistant": "I can open a weather website for you, or search Google for your local weather. What would you prefer?",
+          "timestamp": "2025-11-25T10:14:43.882448"
+        }
+      ],
+      "timestamp": "2025-11-25T10:14:43.882448"
+    },
+    {
+      "exchanges": [
+        {
+          "user": "open GS code",
+          "assistant": "Attempting to open Gs Code.",
+          "timestamp": "2025-11-25T10:19:27.917081"
+        },
+        {
+          "user": "open vs code",
+          "assistant": "Opening Vs Code.",
+          "timestamp": "2025-11-25T10:19:28.365105"
+        }
+      ],
+      "timestamp": "2025-11-25T10:19:28.365105"
+    },
+    {
+      "exchanges": [
+        {
+          "user": "today time",
+          "assistant": "Tell me more about what you need help with.",
+          "timestamp": "2025-11-25T10:32:21.999739"
+        },
+        {
+          "user": "today time",
+          "assistant": "Tell me more about what you need help with.",
+          "timestamp": "2025-11-25T10:32:29.270017"
+        }
+      ],
+      "timestamp": "2025-11-25T10:32:29.270017"
+    },
+    {
+      "exchanges": [
+        {
+          "user": "today time",
+          "assistant": "Tell me more about what you need help with.",
+          "timestamp": "2025-11-25T10:32:29.270017"
+        },
+        {
+          "user": "weather report",
+          "assistant": "Tell me more about what you need help with.",
+          "timestamp": "2025-11-25T10:32:34.904506"
+        }
+      ],
+      "timestamp": "2025-11-25T10:32:34.904506"
+    },
+    {
+      "exchanges": [
+        {
+          "user": "Alexa what is Apple iPhone",
+          "assistant": "Hello! How can I help you?",
+          "timestamp": "2025-11-25T10:39:06.866961"
+        },
+        {
+          "user": "hi Alexa",
+          "assistant": "Hello! How can I help you?",
+          "timestamp": "2025-11-25T10:39:40.536335"
+        }
+      ],
+      "timestamp": "2025-11-25T10:39:40.537344"
+    },
+    {
+      "exchanges": [
+        {
+          "user": "hi Alexa",
+          "assistant": "Hello! How can I help you?",
+          "timestamp": "2025-11-25T10:39:40.536335"
+        },
+        {
+          "user": "what is",
+          "assistant": "Hello! How can I help you?",
+          "timestamp": "2025-11-25T10:39:47.338362"
+        }
+      ],
+      "timestamp": "2025-11-25T10:39:47.338362"
+    },
+    {
+      "exchanges": [
+        {
+          "user": "Saregamapa",
+          "assistant": "Tell me more about what you need help with.",
+          "timestamp": "2025-11-25T11:05:57.565138"
+        },
+        {
+          "user": "TVS",
+          "assistant": "Tell me more about what you need help with.",
+          "timestamp": "2025-11-25T11:06:02.754039"
+        }
+      ],
+      "timestamp": "2025-11-25T11:06:02.754039"
+    },
+    {
+      "exchanges": [
+        {
+          "user": "TVS",
+          "assistant": "Tell me more about what you need help with.",
+          "timestamp": "2025-11-25T11:06:02.754039"
+        },
+        {
+          "user": "open chat gbwhatsapp",
+          "assistant": "Attempting to open Gs Code.",
+          "timestamp": "2025-11-25T11:19:14.306680"
+        }
+      ],
+      "timestamp": "2025-11-25T11:19:14.307589"
+    },
+    {
+      "exchanges": [
+        {
+          "user": "open chat gbwhatsapp",
+          "assistant": "Attempting to open Gs Code.",
+          "timestamp": "2025-11-25T11:19:14.306680"
+        },
+        {
+          "user": "what ise your name",
+          "assistant": "Hello! How can I help you?",
+          "timestamp": "2025-11-25T11:19:33.535130"
+        }
+      ],
+      "timestamp": "2025-11-25T11:19:33.535130"
+    },
+    {
+      "exchanges": [
+        {
+          "user": "hi Google 12 number",
+          "assistant": "Hello! How can I help you?",
+          "timestamp": "2025-11-25T17:07:51.475268"
+        },
+        {
+          "user": "what is Apple",
+          "assistant": "Hello! How can I help you?",
+          "timestamp": "2025-11-25T17:08:01.073282"
+        }
+      ],
+      "timestamp": "2025-11-25T17:08:01.073282"
+    }
+  ]
+}

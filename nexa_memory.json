@@ -1,0 +1,160 @@
+{
+  "conversations": [
+    {
+      "timestamp": "2025-11-25T09:33:17.111999",
+      "user": "hello",
+      "assistant": "Hello! I am Nexa, your AI assistant. How can I help you today?"
+    },
+    {
+      "timestamp": "2025-11-25T09:33:26.282074",
+      "user": "how can I help you today",
+      "assistant": "I can type text, open applications, search the web, play videos on YouTube, tell you the time, and have conversations with you. I also learn from our conversations!"
+    },
+    {
+      "timestamp": "2025-11-25T09:37:27.653043",
+      "user": "sahi hai abhi aur Sare bhi",
+      "assistant": "Hello! I am Nexa, your AI assistant. How can I help you today?"
+    },
+    {
+      "timestamp": "2025-11-25T09:37:36.466194",
+      "user": "how can I help you today",
+      "assistant": "I can type text, open applications, search the web, play videos on YouTube, tell you the time, and have conversations with you. I also learn from our conversations! (from memory)"
+    },
+    {
+      "timestamp": "2025-11-25T09:47:00.754105",
+      "user": "Mere Hath Mein Thodi Na Yaar vah vahan se",
+      "assistant": "Tell me more about what you need help with."
+    },
+    {
+      "timestamp": "2025-11-25T10:19:27.924148",
+      "user": "open GS code",
+      "assistant": "Attempting to open Gs Code."
+    },
+    {
+      "timestamp": "2025-11-25T10:19:28.369491",
+      "user": "open vs code",
+      "assistant": "Opening Vs Code."
+    }
+  ],
+  "learned_responses": {
+    "hello": [
+      {
+        "question": "hello",
+        "answer": "Hello! I am Nexa, your AI assistant. How can I help you today?",
+        "count": 1
+      }
+    ],
+    "help": [
+      {
+        "question": "how can I help you today",
+        "answer": "I can type text, open applications, search the web, play videos on YouTube, tell you the time, and have conversations with you. I also learn from our conversations!",
+        "count": 1
+      },
+      {
+        "question": "how can I help you today",
+        "answer": "I can type text, open applications, search the web, play videos on YouTube, tell you the time, and have conversations with you. I also learn from our conversations! (from memory)",
+        "count": 1
+      }
+    ],
+    "today": [
+      {
+        "question": "how can I help you today",
+        "answer": "I can type text, open applications, search the web, play videos on YouTube, tell you the time, and have conversations with you. I also learn from our conversations!",
+        "count": 1
+      },
+      {
+        "question": "how can I help you today",
+        "answer": "I can type text, open applications, search the web, play videos on YouTube, tell you the time, and have conversations with you. I also learn from our conversations! (from memory)",
+        "count": 1
+      }
+    ],
+    "sahi": [
+      {
+        "question": "sahi hai abhi aur Sare bhi",
+        "answer": "Hello! I am Nexa, your AI assistant. How can I help you today?",
+        "count": 1
+      }
+    ],
+    "abhi": [
+      {
+        "question": "sahi hai abhi aur Sare bhi",
+        "answer": "Hello! I am Nexa, your AI assistant. How can I help you today?",
+        "count": 1
+      }
+    ],
+    "sare": [
+      {
+        "question": "sahi hai abhi aur Sare bhi",
+        "answer": "Hello! I am Nexa, your AI assistant. How can I help you today?",
+        "count": 1
+      }
+    ],
+    "mere": [
+      {
+        "question": "Mere Hath Mein Thodi Na Yaar vah vahan se",
+        "answer": "Tell me more about what you need help with.",
+        "count": 1
+      }
+    ],
+    "hath": [
+      {
+        "question": "Mere Hath Mein Thodi Na Yaar vah vahan se",
+        "answer": "Tell me more about what you need help with.",
+        "count": 1
+      }
+    ],
+    "mein": [
+      {
+        "question": "Mere Hath Mein Thodi Na Yaar vah vahan se",
+        "answer": "Tell me more about what you need help with.",
+        "count": 1
+      }
+    ],
+    "thodi": [
+      {
+        "question": "Mere Hath Mein Thodi Na Yaar vah vahan se",
+        "answer": "Tell me more about what you need help with.",
+        "count": 1
+      }
+    ],
+    "yaar": [
+      {
+        "question": "Mere Hath Mein Thodi Na Yaar vah vahan se",
+        "answer": "Tell me more about what you need help with.",
+        "count": 1
+      }
+    ],
+    "vahan": [
+      {
+        "question": "Mere Hath Mein Thodi Na Yaar vah vahan se",
+        "answer": "Tell me more about what you need help with.",
+        "count": 1
+      }
+    ],
+    "open": [
+      {
+        "question": "open GS code",
+        "answer": "Attempting to open Gs Code.",
+        "count": 1
+      },
+      {
+        "question": "open vs code",
+        "answer": "Opening Vs Code.",
+        "count": 1
+      }
+    ],
+    "code": [
+      {
+        "question": "open GS code",
+        "answer": "Attempting to open Gs Code.",
+        "count": 1
+      },
+      {
+        "question": "open vs code",
+        "answer": "Opening Vs Code.",
+        "count": 1
+      }
+    ]
+  },
+  "user_preferences": {}
+}
